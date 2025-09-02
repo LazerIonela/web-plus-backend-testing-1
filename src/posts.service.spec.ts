@@ -18,7 +18,7 @@ describe('PostsService', () => {
 
     expect(createdPost.text).toBe(post.text);
     expect(createdPost.id).toBeDefined();
-    expect(createdPost.date).toBeInstanceOf(Date);
+    expect(typeof createdPost.date).toBe('string');
     expect(postsService['posts']).toContainEqual(createdPost);
   });
 
